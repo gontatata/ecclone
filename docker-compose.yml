@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   db:
     image: postgres:12
@@ -16,7 +16,7 @@ services:
       - bundle:/usr/local/bundle
       - node_modules:/myapp/node_modules
     ports:
-      - "8080:3000"
+      - "3000:3000"
     depends_on:
       - db
     environment:
@@ -42,7 +42,7 @@ services:
       NODE_OPTIONS: --openssl-legacy-provider
     command: ./bin/webpack-dev-server
     ports:
-      - '3035:3035'
+      - "3035:3035"
 volumes:
   bundle:
   node_modules:
